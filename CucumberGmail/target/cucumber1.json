@@ -1,0 +1,216 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 143917716,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Logging into Rediff",
+        "description": "",
+        "id": "login-into-gmail;logging-into-rediff;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1036941612,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2677776173,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I open Chrome",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chrome",
+                  "offset": 7
+                }
+              ],
+              "location": "GenericSteps.openBrowser(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2500878547,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I go to gmaiUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "gmaiUrl",
+                  "offset": 8
+                }
+              ],
+              "location": "GenericSteps.navigate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.selenium.webdriver.WebConnector.type(WebConnector.java:90)\r\n\tat com.selenium.webdriver.WebConnector.login(WebConnector.java:175)\r\n\tat com.selenium.steps.ApplicationSteps.login(ApplicationSteps.java:28)\r\n\tat ✽.I Login inside application(src/test/resources/com/selenium/gmail/Login.feature:28)\r\n",
+              "duration": 21459534506,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "I Login inside application",
+            "match": {
+              "location": "ApplicationSteps.login(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "saurabholi.qa@gmail.com",
+                  "Test@123T"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2862063,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "Logging into Rediff",
+        "description": "",
+        "id": "login-into-gmail;logging-into-rediff;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1473489914,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4535084155,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I open Mozilla",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mozilla",
+                  "offset": 7
+                }
+              ],
+              "location": "GenericSteps.openBrowser(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2345194516,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I go to gmaiUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "gmaiUrl",
+                  "offset": 8
+                }
+              ],
+              "location": "GenericSteps.navigate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.selenium.webdriver.WebConnector.type(WebConnector.java:90)\r\n\tat com.selenium.webdriver.WebConnector.login(WebConnector.java:175)\r\n\tat com.selenium.steps.ApplicationSteps.login(ApplicationSteps.java:28)\r\n\tat ✽.I Login inside application(src/test/resources/com/selenium/gmail/Login.feature:28)\r\n",
+              "duration": 20938972062,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "I Login inside application",
+            "match": {
+              "location": "ApplicationSteps.login(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "saurabholi.qa@gmail.com",
+                  "Test@123T"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Login into gmail",
+    "description": "  I want to use this template for my feature file",
+    "id": "login-into-gmail",
+    "keyword": "Feature",
+    "uri": "src/test/resources/com/selenium/gmail/Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
