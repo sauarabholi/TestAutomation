@@ -19,7 +19,7 @@ public class ExchangeSerenitySteps {
 		
 		HashMap<String, String> map = TestUtils.UrlParamsMap(page, pageSize, site);
 						
-	return	SerenityRest.rest().given()
+	return	SerenityRest.rest().given().contentType(ContentType.JSON)
 		.spec(ReusableSpecifications.getGenericRequestSpec(map))
 		.get().then()
 		.log().all();	 

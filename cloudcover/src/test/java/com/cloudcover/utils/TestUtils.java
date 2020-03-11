@@ -2,6 +2,7 @@ package com.cloudcover.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,4 +33,10 @@ public class TestUtils {
 		{System.out.println("An Exception encounterd in object to map conversion:"+e.getMessage());}
 		return map;
 	}	
+	
+	public static File getSchemaFile(String fileName)
+	{
+		File schema = new File(System.getProperty("user.dir")+"/"+fileName);
+		return schema;
+	}
 }
