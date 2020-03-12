@@ -17,21 +17,20 @@
 ## (Comments)
 #Sample Feature Definition Template
 @Login
-Feature: Login into gmail
+Feature: StackOverflow 
   I want to use this template for my feature file
 
   
 @Login
-  Scenario Outline: Logging into Rediff
+  Scenario Outline: Stackoverflow test scenario
     Given I open <Browser>
-    And I go to gmaiUrl
-    And I Login inside application
-    |saurabholi.qa@gmail.com| Test@123T|
-    #Then Login should be <Result>
-    
+    And I go to stackOverflow
+    When List of tags tagLinkBase_xpath loc 3 rd tag tagLink_xpath click
+    Then Count the total no of questions newest_count_xpath
+        
     Examples: 
-      |Browser |   Result     |
-      |Chrome  |   success    |      
+      |Browser |   Result     |     
       |Mozilla |   success    |
+      |Chrome  |   success    |
   
   

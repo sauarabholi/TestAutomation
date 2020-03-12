@@ -1,9 +1,7 @@
 package com.cloudcover.cucumber.serenity;
 
 import java.util.HashMap;
-import java.util.List;
 
-import com.cloudcover.model.BadgesByIdsRequestParams;
 import com.cloudcover.utils.ReusableSpecifications;
 import com.cloudcover.utils.TestUtils;
 

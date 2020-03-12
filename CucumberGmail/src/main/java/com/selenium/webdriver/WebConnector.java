@@ -98,6 +98,49 @@ public class WebConnector {
 		getObject(objectKey).clear();
 	}
 	
+	public String getProperty(String key)
+	{
+		return prop.getProperty(key);
+	}
+	
+	public List<WebElement> getObjectsList(String objectKey)
+	{
+		List<WebElement> e = null;
+		WebDriverWait wait  =  new WebDriverWait(driver, 5);
+
+		try {
+			if(objectKey.endsWith("_xpath")) {
+				e = driver.findElements(By.xpath(prop.getProperty(objectKey)));// present
+				//wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(prop.getProperty(objectKey))));
+				wait.until(ExpectedConditions.and
+						(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(prop.getProperty(objectKey))),
+						 ExpectedConditions.elementToBeClickable(By.id(prop.getProperty(objectKey)))));
+			}
+			else if(objectKey.endsWith("_id")) {
+					e = driver.findElements(By.id(prop.getProperty(objectKey)));// present
+					wait.until(ExpectedConditions.and
+							(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(prop.getProperty(objectKey))),
+							 ExpectedConditions.elementToBeClickable(By.id(prop.getProperty(objectKey)))));
+			}
+			else if(objectKey.endsWith("_name")) {
+				e = driver.findElements(By.name(prop.getProperty(objectKey)));// present
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name(prop.getProperty(objectKey))));
+			}
+			else if(objectKey.endsWith("_css")) {
+				e = driver.findElements(By.cssSelector(prop.getProperty(objectKey)));// present
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(prop.getProperty(objectKey))));
+			}
+			else if(objectKey.endsWith("_class")) {
+				e = driver.findElements(By.className(prop.getProperty(objectKey)));// present
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(prop.getProperty(objectKey))));
+			}
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			reportFailure("Unable to extract Object "+objectKey);
+		}
+		return e;
+	}
+	
 	// central function to extract objects
 	public WebElement getObject(String objectKey) {
 		WebElement e = null;
